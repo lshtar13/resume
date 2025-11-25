@@ -1,0 +1,53 @@
+# .gitignore for TeX Live projects and VS Code LaTeX Workshop
+# Keeps LaTeX intermediate/build artifacts out of git
+
+# ----- TeX / LaTeX intermediate files -----
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.ilg
+*.ind
+*.idx
+*.run.xml
+*.vrb
+
+# ----- latexmk / build directories -----
+.latexmk/
+build/
+out/
+dist/
+_build/
+
+# ----- minted (generated LaTeX code) -----
+_minted-*/
+
+# ----- Editor swap/temp files -----
+*~
+.#*
+*.swp
+*.swo
+*.bak
+
+# ----- VS Code workspace settings (optional) -----
+# Uncomment if you do not want to commit editor settings
+# .vscode/
+
+# ----- OS files -----
+.DS_Store
+Thumbs.db
+
+# ----- Optional: ignore generated PDFs -----
+# Many projects keep PDFs in the repo; if you build PDFs locally and
+# do not want them tracked, uncomment the following line:
+# *.pdf
