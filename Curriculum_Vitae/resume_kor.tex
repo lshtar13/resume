@@ -185,8 +185,8 @@
       {\href{https://www.usenix.org/conference/atc17/technical-sessions/presentation/park}{iJournaling}기반 ext4 파일시스템의 fsync 시스템 콜 성능 개선 연구}{}
       \resumeItemListStart
           \resumeItem{리눅스 ext4 파일시스템 상 fast-commit으로 구현되어 있는 \href{https://www.usenix.org/conference/atc17/technical-sessions/presentation/park}{iJournaling} 기법을 fsync() 호출 패턴에 따라 선택적으로 적용하는 기법을 고안하고 커널 상에 구현함.}
-          \resumeItem{Ext4 파일시스템을 GDB등을 이용해 동적으로 분석하여 write 동작이 적은 workload에서 fsync latency가 길어지는 원인을 찾음.}
-          \resumeItem{Femu를 이용해 여러 workload를 시험해가며 iJournaling과 normal-journaling이 각각 강점을 갖는 workload를 파악함.}
+          \resumeItem{Ext4를 gdb를 이용해 동적으로 분석하여 write() 및 fsync()의 로직을 분석함.}
+          \resumeItem{Femu를 이용해 여러 workload를 시험해가며 iJournaling과 normal-journaling의 취약점을 파악함.}
           \resumeItem{fsync() 호출 시 i/o 크기와 이전 호출과의 간격을 고려하여 선택적으로 iJournaling을 수행하는 로직을 구현.}
           \resumeItem{8KiB에서 4MiB에 이르는 다양한 크기와 패턴의 workload 벤치마크를 활용하여 선택적 iJournaling 로직을 테스트하였을 때, 대부분의 경우에서 세 개의 로직 중 가장 빠르거나 두번째로 빠른 것을 확인함.}
       \resumeItemListEnd
