@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Haesung Lee
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Haesung Lee} \\ \vspace{1pt}
+    \small (+82) 10-5641-3844 $|$ \href{mailto:edwin109802@gmail.com}{\underline{edwin109802@gmail.com}} $|$
+    \href{https://github.com/lshtar13}{\underline{github.com/lshtar13}}
+\end{center}
+
+\section{Summary}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \item 
+      \small{Computer Science undergraduate with experience in web development, especially backend engineering, and research. 
+      Currently interested in backend engineering, blockchain, and operating system development.}
+  \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Sungkyunkwan University}{Suwon, South Korea}
+      {Bachelor of Computer Science and Engineering}{Feb. 2022 -- Present}
+      \resumeSubItem{GPA(Major): 4.14(4.34)/4.5}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Software Engineering Intern}{Oct. 2025 -- Present}
+      {Blockchain Dept., Shinhan Securities}{Seoul, South Korea}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented \textbf{microservices} for a \textbf{high-frequency trading} platform.}
+        \resumeItem{Developed backend services with \textbf{Python, gRPC, and FastAPI} for \textbf{trading bots} and researched cryptocurrency arbitrage strategies.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Researcher}{Aug. 2023 -- Feb. 2024}
+      {Intelligent Embedded Systems Research Lab., Sungkyunkwan University}{Suwon, South Korea}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{selective journaling} scheme for the \textbf{ext4} file system to dynamically mitigate \textbf{fsync latency} based on I/O request intervals.}
+        \resumeItem{Improved \textbf{robustness across I/O workloads} (8KiB--4MiB) 
+        by keeping \textbf{average fsync latency} consistently lower than both \textbf{fast\_commit} and \textbf{normal\_only} baselines 
+        and reduced \textbf{maximum fsync latency} across all workloads compared to baselines.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Artificial Intelligence Engineering Intern}{Jun. 2023 -- Aug. 2023}
+      {SOYNET Co,Ltd.}{Seongnam, South Korea}
+      \resumeItemListStart
+        \resumeItem{Analyzed and ported open sourced deep learning models such as \textbf{YOLOv7} from PyTorch to an in-house \textbf{C++/CUDA} inference engine, achieving \textbf{3.5$\times$ faster inference} and \textbf{2.7$\times$ lower GPU memory usage}.}
+        \resumeItem{Trained and fine-tuned deep learning models such as \textbf{MagFace} for object detection and segmentation tasks, improving accuracy on internal benchmarks.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/skkuding/codedang}{Codedang}} $|$ \emph{Typescript, Go, NestJS, Prisma, Docker, Redis, RabbitMQ, GraphQL, Git}}{Aug. 2022 -- Feb. 2024}
+          \resumeItemListStart
+            \resumeItem{Developed \textbf{RESTful APIs} for an \textbf{online judge} platform using \textbf{NestJS} and \textbf{Prisma ORM}.}
+            \resumeItem{Refactored legacy admin services from \textbf{RESTful API} to \textbf{GraphQL}.}
+            \resumeItem{Built a scalable \textbf{asynchronous code evaluation system} in \textbf{Go} with \textbf{RabbitMQ} to handle high-concurrency submissions.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/HOYNET/Fin2Vec}{Fin2Vec}} $|$ \emph{Python, PyTorch, Conda, Matplotlib}}{Aug. 2023 -- Nov. 2023}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{transformer-based model} (\textbf{Fin2Vec}) that turns \textbf{financial time series} data into meaningful embeddings using attention mechanisms.}
+            \resumeItem{Developed \textbf{clustering and visualization tools} to analyze stock market trends based on learned embeddings and Bloomberg data.}
+            \resumeItem{Designed an \textbf{end-to-end training and inference pipeline} using \textbf{PyTorch}, standardizing hyperparameter tuning experiments.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/EdgeCrafters}{Edged Judger Platform}} $|$ \emph{C, CMake, Git}}{Jul. 2023 -- Sep. 2023}
+          \resumeItemListStart
+            \resumeItem{Designed a \textbf{lightweight and secure code-judging sandbox} environment for \textbf{educational use}, isolating user code execution at the OS level.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Go, Python, C/C++, TypeScript} \\
+     \textbf{Frameworks}{: Node.js, NextJS, FastAPI, gRPC, Apollo} \\
+     \textbf{Libraries}{: CCXT, PyTorch, pandas, NumPy, Matplotlib} \\
+     \textbf{Developer Tools}{: Git, Docker, Redis, RabbitMQ, GDB, Postman, Bruno, Linux, Vim} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

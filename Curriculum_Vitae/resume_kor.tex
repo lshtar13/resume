@@ -1,0 +1,312 @@
+%-------------------------
+% Resume in Latex
+% Original Author : Sourabh Bajaj
+% Adaptation : Hyunggi Chang
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{kotex} % 한글 사용 가능! 
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{kotex} % Enable Korean!
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSummary}[1]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      #1
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textnormal{\small #3} & \textnormal{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeEmployment}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textnormal{\small #3} & \textnormal{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProject}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+      \small{#2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeResearch}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} {\small #4 \vspace{-2pt}} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeTalk}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSkills}[1]{
+  \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      #1
+    \end{tabular*}
+}
+
+\newcommand{\resumeCommunity}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeEmploymentListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeEmploymentListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://lshtar13.github.io}{\Large 이해성}} & Github: \href{https://github.com/lshtar13}{lshtar13}  \\
+  \href{https://lshtar13.github.io}{https://lshtar13.github.io} & Email : \href{mailto:edwin109802@gmail.com}{edwin109802@gmail.com} \\
+  {} & Mobile : (+82) 10-5641-3844
+\end{tabular*}
+
+%-----------Summary-----------------
+\section{Summary}
+    \resumeSummary{백엔드 엔지니어링과 시스템 프로그래밍에 관심이 많은 대학생입니다.}
+    \textbf{주요 역량 요약}
+    \resumeItemListStart
+      \resumeItem{NestJS, FastAPI를 이용한 백엔드 API 서버 개발 가능.}
+      \resumeItem{Go와 Python을 이용한 비동기 동시성 프로그래밍 가능.}
+      \resumeItem{RabbitMQ 등 오픈소스를 이용한 메시지 큐 및 캐시 시스템 설계 및 구현 가능.}
+      \resumeItem{GDB 등 디버거를 이용한 시스템 소프트웨어 및 오픈소스 분석 및 디버깅 가능.}
+    \resumeItemListEnd   
+    \textbf{주요 경험 요약}
+    \resumeItemListStart
+      \resumeItem{2번의 인턴십, 1번의 학부연구생, 3번의 협업 프로젝트 개발 경험.}
+      \resumeItem{TypeScript를 사용해 NestJS 기반 실사용 서비스의 REST 및 GraphQL API 개발 경험.}
+      \resumeItem{Go와 RabbitMQ, Redis를 사용해 대용량 트래픽을 처리하는 마이크로서비스 유지보수 및 기능 개발 경험.}
+      \resumeItem{Python과 FastAPI, gRPC, Kafka를 사용해 다수의 트레이딩 봇을 운영하는 서비스 개발 경험.}
+      \resumeItem{Bruno 등을 이용한 API 문서화 및 Prisma, SQLAlchemy 등 ORM을 이용한 데이터베이스 설계 및 스키마 작성 경험.}
+    \resumeItemListEnd   
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeEmploymentListStart
+    \resumeEmployment
+      {신한투자증권 블록체인부 인턴}{2025.10 - 현재}
+      {암호화폐 트레이딩 플랫폼 MVP 개발}{}
+        \resumeItemListStart
+            \resumeItem{암호화폐 거래소의 API를 활용해 고빈도 매매를 수행하는 트레이딩 봇들을 구동하고 관리하는 마이크로서비스 플랫폼을 기획하고 구현.}
+            \resumeItem{Python의 asyncio와 threading 라이브러리를 이용해 여러 개의 트레이딩 봇을 동시에 구동할 수 있는 비동기-멀티스레드 환경을 구축.}
+            \resumeItem{Kafka를 이용해 트레이딩 봇과 주문 처리 서비스를 연결해 일괄 주문 및 주문 직렬화를 구현.}
+            \resumeItem{gRPC를 이용해 트레이딩 봇을 제어할 수 있는 API를 제공하고, 이를 bruno를 통해 테스트하고 문서화함.}
+            \resumeItem{암호화폐 및 DeFi 생태계를 조사하여 수익을 낼 수 있는 차익거래 전략을 수립 및 트레이딩 봇으로 구현.}
+        \resumeItemListEnd   
+      {예치금 관리 서비스 QA 대응}{}
+        \resumeItemListStart
+            \resumeItem{조각투자 서비스의 제휴사들에 대한 계좌 개설 등의 QA 요청 처리.}
+        \resumeItemListEnd   
+    
+        
+    \resumeEmployment
+      {성균관대학교 지능형임베디드시스템연구실 학부연구생}{2023.08 - 2024.02}
+      {\href{https://www.usenix.org/conference/atc17/technical-sessions/presentation/park}{iJournaling}기반 ext4 파일시스템의 fsync 시스템 콜 성능 개선 연구}{}
+      \resumeItemListStart
+          \resumeItem{리눅스 ext4 파일시스템 상 fast-commit으로 구현되어 있는 \href{https://www.usenix.org/conference/atc17/technical-sessions/presentation/park}{iJournaling} 기법을 fsync() 호출 패턴에 따라 선택적으로 적용하는 기법을 고안하고 커널 상에 구현함.}
+          \resumeItem{Ext4 파일시스템을 GDB등을 이용해 동적으로 분석하여 write 동작이 적은 workload에서 fsync latency가 길어지는 원인을 찾음.}
+          \resumeItem{Femu를 이용해 여러 workload를 시험해가며 iJournaling과 normal-journaling이 각각 강점을 갖는 workload를 파악함.}
+          \resumeItem{fsync() 호출 시 i/o 크기와 이전 호출과의 간격을 고려하여 선택적으로 iJournaling을 수행하는 로직을 구현.}
+          \resumeItem{8KiB에서 4MiB에 이르는 다양한 크기와 패턴의 workload 벤치마크를 활용하여 선택적 iJournaling 로직을 테스트하였을 때, 대부분의 경우에서 세 개의 로직 중 가장 빠르거나 두번째로 빠른 것을 확인함.}
+      \resumeItemListEnd
+    
+    \resumeEmployment
+      {(주)소이넷 산학 인턴}{2023.06 - 2023.08}
+      {오픈소스 CV 모델 포팅}{}
+      \resumeItemListStart
+          \resumeItem{YoLov7, YoLov8 등 오픈소스 CV 모델을 CUDA 기반 당사 솔루션으로 포팅하는 작업 수행.}
+          \resumeItem{Python, PyTorch로 작성된 모델의 구조를 분석하고, C++/CUDA 기반 단일 추론 함수로 단순화함.}
+          \resumeItem{한국인 안면 데이터를 전처리해 안면 인식 모델인 MagFace에 학습시키는 작업 수행.}
+      \resumeItemListEnd
+      
+  \resumeEmploymentListEnd
+
+%-----------Projects-----------------
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProject
+      {Codedang}
+         {[Project Description].}
+         \resumeItemListStart
+             \resumeItem{백엔드 엔지니어 \\
+             \textbf{Key achievements}: \\ 
+             1. [Description1] \\
+             2. [Description2] \\
+             3. [Description3]}
+         \resumeItemListEnd
+    
+    \resumeProject
+      {Fin2Vec}
+      {[Project Description]}
+      \resumeItemListStart
+        \resumeItem{[Role1]}
+        \resumeItem{[Role2]}
+        \resumeItem{[Role3]}
+    \resumeItemListEnd
+    
+    \resumeProject
+      {Edged Judger Platform}
+    {[Project Description]}
+    
+    \resumeProject
+      {Gradphone}
+    {[Project Description]}
+
+  \resumeSubHeadingListEnd
+
+%-----------Skills-----------------
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    \resumeSkills{\textbf{Programming Languages} - Typescript, Python, Go, C/C++}
+    \resumeSkills{\textbf{Frameworks \& Libraries} - NestJS, gRPC, GraphQL, PyTorch}
+    \resumeSkills{\textbf{Others} - Docker, Prisma, SQLAlchemy, GDB}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education \& Others}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {성균관대학교}{수원, 경기}
+      {소프트웨어학과 -- 학점(전공): 4.14(4.34)/4.5}{2022.02 -- 현재}
+    \resumeSubheading
+      {대한민국 육군}{}
+      {병장 만기 전역}{2024.04 -- 2025.10}
+  \resumeSubHeadingListEnd
+
+% %-----------EXPERIENCE-----------------
+% \section{Research Experiences}
+%   \resumeSubHeadingListStart
+
+%     \resumeResearch
+%       {[Lab Name], [School name]}{Seoul, South Korea}
+%       {[Position] (Advisor: [Name of Lab head])}{}{Jan. 20XX - Mar. 20XX}
+%     \resumeResearch
+%       {[Lab Name], [School name]}{Seoul, South Korea}
+%       {[Position] (Advisor: [Name of Lab head])}{}{Jan. 20XX - Sept. 20XX}
+
+%   \resumeSubHeadingListEnd
+
+% %-----------Talks-----------------
+% \section{Conference Talks}
+%     \resumeSubHeadingListStart
+    
+%         \resumeTalk{[Conference name]}{20XX}
+%             \resumeItemListStart
+%                 \resumeItem{[Talk details]}
+%             \resumeItemListEnd
+
+%         \resumeTalk{[Conference name]}{20XX}
+%             \resumeItemListStart
+%                 \resumeItem{[Talk details]}
+%             \resumeItemListEnd
+
+%     \resumeSubHeadingListEnd
+    
+% %-----------Papers-----------------
+% \section{Papers}
+%     \resumeSubHeadingListStart
+%         \resumeItem{[\textbf{Paper Name}] [Authors] [Journal Name] [Other citation details}
+%         \resumeItem{[\textbf{Paper Name}] [Authors] [Journal Name] [Other citation details}
+%         \resumeItem{[\textbf{Paper Name}] [Authors] [Journal Name] [Other citation details}
+%     \resumeSubHeadingListEnd
+
+% %-----------Community-----------------
+% \section{Community}
+%     \resumeSubHeadingListStart
+%         \resumeCommunity{[Role]}{20XX -- Present}
+%         {[Community Name]}
+        
+%         \resumeCommunity{[Role]}{20XX -- Present}
+%         {[Community Name]}
+%         \resumeItemListStart
+%             \resumeItem{[Some Event information]}
+%             \resumeItem{[Some Group information}
+%         \resumeItemListEnd    
+
+%     \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
