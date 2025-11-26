@@ -79,10 +79,10 @@
 
 \newcommand{\resumeProject}[2]{
   \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} \\
-      \small{#2} \\
-    \end{tabular*}\vspace{-5pt}
+    \begin{tabularx}{0.97\textwidth}[t]{X}
+      	\textbf{#1} \\
+      {\small\raggedright #2} \\
+    \end{tabularx}\vspace{-5pt}
 }
 
 \newcommand{\resumeResearch}[5]{
@@ -143,22 +143,24 @@
 
 %-----------Summary-----------------
 \section{Summary}
+  \resumeSubHeadingListStart
     \resumeSummary{백엔드 엔지니어링과 시스템 프로그래밍에 관심이 많은 대학생입니다.}
-    \textbf{주요 역량 요약}
-    \resumeItemListStart
+    \item \textbf{주요 역량 요약}
+    \begin{itemize}
       \resumeItem{NestJS, FastAPI를 이용한 백엔드 API 서버 개발 가능.}
       \resumeItem{Go와 Python을 이용한 비동기 동시성 프로그래밍 가능.}
       \resumeItem{RabbitMQ 등 오픈소스를 이용한 메시지 큐 및 캐시 시스템 설계 및 구현 가능.}
       \resumeItem{GDB 등 디버거를 이용한 시스템 소프트웨어 및 오픈소스 분석 및 디버깅 가능.}
-    \resumeItemListEnd   
-    \textbf{주요 경험 요약}
-    \resumeItemListStart
+    \end{itemize}
+    \item \textbf{주요 경험 요약}
+    \begin{itemize}
       \resumeItem{2번의 인턴십, 1번의 학부연구생, 3번의 협업 프로젝트 개발 경험.}
       \resumeItem{TypeScript를 사용해 NestJS 기반 실사용 서비스의 REST 및 GraphQL API 개발 경험.}
       \resumeItem{Go와 RabbitMQ, Redis를 사용해 대용량 트래픽을 처리하는 마이크로서비스 유지보수 및 기능 개발 경험.}
       \resumeItem{Python과 FastAPI, gRPC, Kafka를 사용해 다수의 트레이딩 봇을 운영하는 서비스 개발 경험.}
       \resumeItem{Bruno 등을 이용한 API 문서화 및 Prisma, SQLAlchemy 등 ORM을 이용한 데이터베이스 설계 및 스키마 작성 경험.}
-    \resumeItemListEnd   
+    \end{itemize}
+  \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
@@ -166,10 +168,10 @@
   \resumeEmploymentListStart
     \resumeEmployment
       {신한투자증권 블록체인부 인턴}{2025.10 - 현재}
-      {암호화폐 트레이딩 플랫폼 MVP 개발}{}
+      {암호화폐 트레이딩 봇 플랫폼 MVP 개발}{}
         \resumeItemListStart
             \resumeItem{암호화폐 거래소의 API를 활용해 고빈도 매매를 수행하는 트레이딩 봇들을 구동하고 관리하는 마이크로서비스 플랫폼을 기획하고 구현.}
-            \resumeItem{Python의 asyncio와 threading 라이브러리를 이용해 여러 개의 트레이딩 봇을 동시에 구동할 수 있는 비동기-멀티스레드 환경을 구축.}
+            \resumeItem{Python으로 여러 개의 트레이딩 봇을 동시에 구동할 수 있는 비동기-멀티스레드 환경을 구축.}
             \resumeItem{Kafka를 이용해 트레이딩 봇과 주문 처리 서비스를 연결해 일괄 주문 및 주문 직렬화를 구현.}
             \resumeItem{gRPC를 이용해 트레이딩 봇을 제어할 수 있는 API를 제공하고, 이를 bruno를 통해 테스트하고 문서화함.}
             \resumeItem{암호화폐 및 DeFi 생태계를 조사하여 수익을 낼 수 있는 차익거래 전략을 수립 및 트레이딩 봇으로 구현.}
@@ -207,32 +209,41 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeProject
-      {Codedang}
-         {[Project Description].}
+      {Codedang (\href{https://github.com/skkuding/codedang}{github.com/skkuding/codedang})}
+         { 성균관대 자체 코딩 플랫폼 구축을 목표로 하는 프로젝트입니다. 
+         교내 학생동아리리 SKKUDING에서 개발 및 유지보수를 담당하고 있으며, 이러한 공로를 인정받아 2023년 성균명품스터디클럽에 선정되었습니다. 
+         현재는 온라인 저지 서비스를 지원하며 각종 프로그래밍 수업과 대회에 활용되고 있습니다.}
          \resumeItemListStart
              \resumeItem{백엔드 엔지니어 \\
              \textbf{Key achievements}: \\ 
-             1. [Description1] \\
-             2. [Description2] \\
-             3. [Description3]}
+             1.  NestJS로 작성된 백엔드 서비스의 기능 개발과 유지보수를 담당함.\\
+             2.  REST API로 client서비스와 통합되어 제공되던 admin 서비스를 GraphQL로 전환 및 분리하는 작업을 수행함.\\
+             3.  Prisma ORM을 이용해 데이터베이스 스키마를 설계하였고, bruno를 이용해 API 문서화 및 테스트를 수행함. \\
+             4.  Mocha와 Chai를 이용해 단위 테스트 및 통합 테스트 코드를 작성함.\\
+             5.  Go로 작성된 judger 서비스와 Redis, RabbitMQ로 구성된 마이크로서비스의 기능개발과 유지보수를 담당함.\\
+             6.  Judger 서비스의 순차 채점 로직을 병렬적으로 개선하고, NestJS와 RabbitMQ로 통신하는 로직을 비동기적으로 개선함.\\
+             7.  Judger 서비스의 스페셜 저지 기능을 추가함.
+             }
          \resumeItemListEnd
     
     \resumeProject
-      {Fin2Vec}
-      {[Project Description]}
+      {Fin2Vec (\href{https://github.com/HOYNET/Fin2Vec}{github.com/HOYNET/Fin2Vec})}
+      { 주식 시세 및 재무제표 데이터를 딥러닝 모델을 사용해 임베딩으로 변환하여 각 주식 종목별 연관도를 분석하는 모델을 개발한 프로젝트입니다.
+      파악된 연관도를 바탕으로 포트폴리오 추천 및 주가 예측 시스템을 개발하였습니다.
+        해당 프로젝트는 성균관대학교 대학혁신과공유센터의 2023학년도 2학기 Co-Deeplearning 프로젝트에 선정되어 지원받아 진행하였습니다.}
       \resumeItemListStart
-        \resumeItem{[Role1]}
-        \resumeItem{[Role2]}
-        \resumeItem{[Role3]}
+        \resumeItem{팀장 및 머신러닝 엔지니어 \\
+        \textbf{Key achievements}: \\
+        1.  트랜스포머 모델의 인코더를 도입해 주식 시세 및 재무제표 데이터를 임베딩으로 변환하는 모델을 설계함. \\
+        2.  PyTorch를 활용해 모델을 학습시키고, 가장 적절한 임베딩을 생성하는 데이터셋을 선정함. \\
+        3.  추출된 임베딩을 블룸버그에서 제공한 종목간 연관도 데이터를 바탕으로 검증하고 클러스터링 기법을 고안함.\\
+        4.  연관도 정보를 바탕으로 포트폴리오 추천 시스템을 설계하고 구현함. }
     \resumeItemListEnd
     
     \resumeProject
-      {Edged Judger Platform}
-    {[Project Description]}
-    
-    \resumeProject
-      {Gradphone}
-    {[Project Description]}
+      {Gradphone (\href{https://github.com/jspark2000/skku-qr-backend}{github.com/jspark2000/skku-qr-backend})}
+    {졸업식 및 각종 학교 행사 시 QR코드와 TTS를 통해 프레젠테이션을 지원하는 시스템을 개발한 프로젝트입니다. 
+    NestJS와 Prisma ORM을 사용해 백엔드 API 서버를 개발하였고, thunderclient를 이용해 API 문서화 및 테스트를 수행하였습니다. }
 
   \resumeSubHeadingListEnd
 
@@ -240,7 +251,7 @@
 
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSkills{\textbf{Programming Languages} - Typescript, Python, Go, C/C++}
+    \resumeSkills{\textbf{Programming Languages} - Typescript, Python, Go, C}
     \resumeSkills{\textbf{Frameworks \& Libraries} - NestJS, gRPC, GraphQL, PyTorch}
     \resumeSkills{\textbf{Others} - Docker, Prisma, SQLAlchemy, GDB}
   \resumeSubHeadingListEnd
